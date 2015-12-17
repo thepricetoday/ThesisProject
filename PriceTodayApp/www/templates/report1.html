@@ -1,0 +1,41 @@
+<ion-view view-title="">
+  <ion-content class="padding">
+   <div class="list">
+    <div class="item">
+      <center><h1>Report Vendor</h1></center>
+   </div>
+  
+   </div>
+<div class="list">
+<label class="item item-step">
+ <div class="row">
+  <div class="col1 " >Step 1</div>
+  <div class="col1 activated">Step 2</div> 
+  <div class="col1">Step3</div>
+</div>
+</label>
+<label class="item">
+    Vendor Information
+  <label class="item item-input">
+    <input type="text" placeholder="City"  id="City" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Market Name"  id="MarketName" required>
+  </label>
+ <label class="item item-input">
+    <input type="text" placeholder="Stall Numeber"  id="StallNumeber" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Product Name"  id="ProductName" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Vendor's Product Price"  id="VendorsProductPrice" required>
+  </label>
+  <div class="item"> 
+  <a class="button button-balanced" data-ng-click="contactForm.$valid && sendTheMail()">
+  Submit
+</a>
+</div>
+</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view view-title="">
+  <ion-content class="padding">
+   <div class="list">
+    <div class="item">
+      <center><h1>Report Vendor</h1></center>
+   </div> 
+   </div>
+<div class="list">
+<form name="contactForm" id="contactForm" ng-submit="contactForm.$valid && sendTheMail()" novalidate>
+  <label class="item">
+    <strong>Personal Information</strong>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="First Name" id="FirstName" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Last Name"  id="LastName" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Email"  id="Email" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Contact Number"  id="ContactNumber" required>
+  </label>
+  <label class="item">
+    <strong>Vendor Information</strong>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="City"  id="City" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Market Name"  id="MarketName" required>
+  </label>
+ <label class="item item-input">
+    <input type="text" placeholder="Stall Numeber"  id="StallNumeber" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Product Name"  id="ProductName" required>
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Vendor's Product Price"  id="VendorsProductPrice" required>
+  </label>
+  <div class="item"> 
+  <input class="button button-balanced" type="submit" value="Submit" id="SubmitBtn">
+</div>
+</form>
+</div>
+</ion-content>
+</ion-view>

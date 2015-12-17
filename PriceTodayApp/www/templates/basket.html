@@ -1,0 +1,41 @@
+
+
+<ion-view view-title="">
+  <ion-content class="padding">
+  <div class="list">
+    <div class="item item-button-right">
+      <center><h1>My Basket</h1></center>
+    <a href="#/app/maps" class="button button-light ion-home"></a>
+   </div> 
+   </div>
+   <div class="list" ng-repeat="item in favorites">
+  
+    <a class="item item-avatar  item-button-right" href="#">
+      
+     <img class="basket"src="{{item.Image}}">
+      <div class="row">
+      <div class="col-name"><strong>{{item.Name}}</strong></div>
+      
+      </div>
+      <div class="row">
+      <div class="col-list">&#8369;{{item.Price}}</div>
+      <div class="col-list">X{{item.Quantity}}Kls.</div>
+      <div class="col-list"><strong>={{item.Price*item.Quantity}} Php</strong></div>
+       </div>
+       <button class="button red" ng-click="removePlayer($index)"><i class="icon ion-close-circled"></i></button>
+    </a>
+    
+</div>
+
+<div class="list">
+    <div class="item">
+    <div class="row">
+     <div class="col total"><strong>Total:</strong></div>
+    <div class="col total"><strong>&#8369;{{getTotal()}}</div></strong>
+    </div>
+   </div> 
+   </div>
+  </ion-content>
+</ion-view>
+
+
