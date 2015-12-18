@@ -86,14 +86,13 @@ class home extends CI_Controller {
         }
     }
     public function latestUpdates(){
-        $newUpdateID = $this->ProductPrice_model->get_latestIDupdates();
+       $newUpdateID = $this->ProductPrice_model->get_latestIDupdates();
         var_dump($newUpdateID);
-       foreach ($newUpdateID as $row)
-            {
-               $idupdate = $row->LAST_INSERT_ID(priceupdateheaderID);
-            }
-           $data = $this->ProductPrice_model->get_latestupdates('1');
-           var_dump($data);
-      
+       foreach ( $newUpdateID as $datas => $data){
+                $ID = $data->latestupdateID;
+          $newUpdates = $this->ProductPrice_model->get_latestupdates($ID);
+           var_dump( $newUpdates);
+           }
+     
     }
 }	

@@ -15,11 +15,12 @@ class ProductPrice_model extends CI_Model {
 //	public function delete($id){
 //		return $this->db->delete('productprice',array('id' => $id));
 //	}
-	public function get_latestIDupdates(){
+	public function get_all(){
 		return $this->db->get('latestupdates_view')->result_object();
 	}
 	public function get_latestupdates($id){
 		return $this->db->get_where('price_update_view', array('priceupdateheaderID' => $id))->result_object();
+
 	}
 	
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2015 at 01:33 PM
+-- Generation Time: Dec 18, 2015 at 01:55 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -70,7 +70,7 @@ INSERT INTO `employee` (`employeeID`, `employeeFIRSTNAME`, `employeeLASTNAME`, `
 -- Stand-in structure for view `latestupdates_view`
 --
 CREATE TABLE IF NOT EXISTS `latestupdates_view` (
-`LAST_INSERT_ID(priceupdateheaderID)` bigint(11) unsigned
+`latestupdateID` bigint(11) unsigned
 );
 -- --------------------------------------------------------
 
@@ -317,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `user_update_view` (
 --
 DROP TABLE IF EXISTS `latestupdates_view`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `latestupdates_view` AS select last_insert_id(`priceupdateheader`.`priceupdateheaderID`) AS `LAST_INSERT_ID(priceupdateheaderID)` from `priceupdateheader`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `latestupdates_view` AS select last_insert_id(`priceupdateheader`.`priceupdateheaderID`) AS `latestupdateID` from `priceupdateheader`;
 
 -- --------------------------------------------------------
 

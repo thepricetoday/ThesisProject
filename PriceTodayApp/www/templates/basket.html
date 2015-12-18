@@ -19,7 +19,7 @@
       </div>
       <div class="row">
       <div class="col-list">&#8369;{{item.Price}}</div>
-      <div class="col-list">X{{item.Quantity}}Kls.</div>
+      <div class="col-list">X{{item.Quantity}}{{item.Unitofmeasure}}</div>
       <div class="col-list"><strong>={{item.Price*item.Quantity}} Php</strong></div>
        </div>
        <button class="button red" ng-click="removePlayer($index)"><i class="icon ion-close-circled"></i></button>

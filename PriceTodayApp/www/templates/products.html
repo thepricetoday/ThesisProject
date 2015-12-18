@@ -14,16 +14,16 @@
     <div class="list list-inset">
   <label class="item item-input">
     <i class="icon ion-search placeholder-icon"></i>
-    <input type="text" placeholder="Search" ng-model="ProductName">
+    <input type="text" placeholder="Search" ng-model="name">
   </label>
 </div>
-<div class="list" ng-repeat="items in list | filter:ProductName ">
+<div class="list" ng-repeat="items in list | filter:name ">
 <div class="row item">
 
-  <div class="col col-image"><center><img src="{{items.ProductImage}}"></center></div>
+  <div class="col col-image"><center><img src="{{items.imageURL}}"></center></div>
   <div class="col"><center>
-    <div class="col-name"><strong>{{items.ProductName}}</strong></div>
-     <div class="col-list">&#8369;{{items.ProductPrice}}</div>
+    <div class="col-name"><strong>{{items.name}}</strong></div>
+     <div class="col-list">&#8369;{{items.price}}/{{items.unitofmeasure}}</div>
      </center>
      </div>
   <div class="col"> 

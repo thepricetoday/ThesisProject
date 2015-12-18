@@ -9,7 +9,7 @@ angular.module('starter.controllers', ['ionic'])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   $scope.list = [];
-})
+}) 
 
 .controller('IntroCtrl', function($scope, $timeout, $ionicLoading, $http, User) {
   ///retrieve data from database using Restful
@@ -40,11 +40,12 @@ angular.module('starter.controllers', ['ionic'])
 
    $scope.addToFavorite = function(index) {
         $scope.inup=index;
-        $scope.Name = $scope.list[index].ProductName;
-        $scope.Price = $scope.list[index].ProductPrice;
-        $scope.Image = $scope.list[index].ProductImage;    
+        $scope.Name = $scope.list[index].name;
+        $scope.Price = $scope.list[index].price;
+        $scope.Image = $scope.list[index].imageURL;
+        $scope.Unitofmeasure = $scope.list[index].unitofmeasure;    
     var Quantity = document.getElementById('Quantity').value;
-    User.favorites.push({Image:$scope.Image,Name:$scope.Name,Price:$scope.Price,Quantity:Quantity});
+    User.favorites.push({Image:$scope.Image,Name:$scope.Name,Price:$scope.Price,Quantity:Quantity,Unitofmeasure:$scope.Unitofmeasure});
   }
   })
 

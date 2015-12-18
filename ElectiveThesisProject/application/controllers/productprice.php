@@ -20,20 +20,21 @@ class ProductPrice extends REST_Controller {
 */	
 
 		
-	
+	 
 	public function index_options(){
 		die();
 	}
 	public function index_get()
 	{	
-
-		$this->load->model('ProductPrice_model','get_latestIDupdates');
-		$newUpdateID = $this->get_latestIDupdates->get_all();
-		$this->load->model('ProductPrice_model','get_latestupdates');
-		$data = $this->get_latestupdates($newUpdateID);
-		$this->response($data, 200);
-		
-	
+		$this->load->model('ProductPrice_model','productprice');
+		$newUpdateID  = $this->productprice->get_all();
+		foreach ( $newUpdateID as $datas => $data){
+			$ID = $data->latestupdateID;
+			
+		}
+			$this->load->model('ProductPrice_model','updates');
+			$data = $this->updates->get_latestupdates($ID);
+			$this->response($data, 200);
 	}
 	
 	public function index_post()
